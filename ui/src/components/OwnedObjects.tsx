@@ -76,7 +76,7 @@ export function OwnedObjects({ refreshKey, setRefreshKey }: RefreshProps) {
 
     setIsTransferring((prev) => ({ ...prev, [heroId]: true }));
 
-    const tx = transferHero(heroId, address);
+    const tx = transferHero(packageId, address, heroID);
     signAndExecute(
       { transaction: tx },
       {
